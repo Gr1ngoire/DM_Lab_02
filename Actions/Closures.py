@@ -1,4 +1,4 @@
-from Algorythms import Utils
+from Actions.Algorythms import Utils
 
 
 def get_diagonal_matrix(matrix):
@@ -18,7 +18,7 @@ def closure(matrix, special_matrix):
         for j in range(len(matrix[i])):
             row.append(1 if matrix[i][j] == 1 or special_matrix[i][j] == 1 else 0)
         result_closure.append(row)
-
+    return result_closure
 
 def reflective_closure(matrix):
     return closure(matrix, get_diagonal_matrix(matrix))
