@@ -1,5 +1,6 @@
 from Actions.Algorythms import Utils
-
+from Actions import PropertyString
+from Actions.Algorythms import RelationProperties
 boolMatrix = [[0, 0, 0, 0, 1],
               [0, 0, 1, 1, 0],
               [1, 0, 0, 0, 0],
@@ -7,10 +8,6 @@ boolMatrix = [[0, 0, 0, 0, 1],
               [1, 1, 0, 0, 0]]
 Utils.print_matrix(boolMatrix)
 print('\n')
-Utils.print_matrix(Utils.compose_matrix(boolMatrix, boolMatrix, 2))
-# print('\n')
-# Utils.print_matrix(Utils.transponate_matrix(boolMatrix))
-# print('\n')
-# Utils.print_matrix(Utils.invert_matrix(boolMatrix))
-# print('\n')
-# print(RelationProperties.reflection_antireflection(boolMatrix))
+print(RelationProperties.reflection_antireflection(boolMatrix), RelationProperties.symmetric_antisymmetric_asymmetric(boolMatrix), RelationProperties.transitive(boolMatrix))
+print('\n')
+print(PropertyString.type_of_matrix(boolMatrix))
