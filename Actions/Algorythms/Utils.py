@@ -49,11 +49,3 @@ def invert_matrix(matrix):
             row_to_insert.append(1 if j == 0 else 0)
         result_matrix.append(row_to_insert)
     return result_matrix
-
-
-def has_symmetry(matrix):
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            if (matrix[i][j] == 0 and matrix[j][i] == 1) or (matrix[i][j] == 1 and matrix[j][i] == 0):
-                return False
-    return True
