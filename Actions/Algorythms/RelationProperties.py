@@ -23,9 +23,9 @@ def symmetric_antisymmetric_asymmetric(matrix):
     if Utils.equal(matrix, Utils.transponate_matrix(matrix)):
         return "Symmetric"
     elif (reflection_antireflection(matrix) == "Antireflective") and (
-            not Utils.equal(matrix, Utils.transponate_matrix(matrix))):
+            Utils.does_not_have_symmetry(matrix)):
         return "Asymmetric"
-    elif not Utils.equal(matrix, Utils.transponate_matrix(matrix)):
+    elif Utils.does_not_have_symmetry(matrix):
         return "Antisymmetric"
     else:
         return "Neither symmetric, nor asymmetric, nor Antisymmetric"
