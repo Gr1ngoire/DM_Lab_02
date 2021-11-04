@@ -56,3 +56,12 @@ def does_not_have_symmetry(matrix):
             if (matrix[i][j] == 1 and matrix[j][i] == 1) or (matrix[i][j] == 0 and matrix[j][i] == 0):
                 return False
     return True
+
+
+def antitransitive_check(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            for k in range(len(matrix[i])):
+                if matrix[i][j] == 1 and matrix[j][k] == 1 and matrix[i][k] != 1 and (i != j or j != k):
+                    return False
+    return True

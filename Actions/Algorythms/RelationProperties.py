@@ -34,5 +34,7 @@ def symmetric_antisymmetric_asymmetric(matrix):
 def transitive(matrix):
     if Utils.equal(Utils.compose_matrix(matrix, matrix, 2), matrix):
         return "Transitive"
+    elif Utils.antitransitive_check(matrix):
+        return "Antitransitive"
     else:
         return "Not transitive"
